@@ -17,7 +17,7 @@
 		applicationName	= 'Raspberry in Komarovo', // Replaces Xively logo in the header
 		dataDuration	= '1day', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 0, // Default interval for data to be displayed (in seconds)
-		dataColor	= '25262a', // CSS HEX value of color to represent data (omit leading #)
+		dataColor	= 'ff5722', // CSS HEX value of color to represent data (omit leading #)
 		hideForm	= 1; // To hide input form use value of 1, otherwise set to 0
 
 // Function Declarations
@@ -391,7 +391,7 @@
 
 	if(applicationName != '') {
 		$('h1').html(applicationName).css('color', 'white');
-		document.title = applicationName + ' - Powered by Xively';
+		document.title = applicationName + ' ';
 	}
 
 	if(dataColor == '') {
