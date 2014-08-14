@@ -386,7 +386,7 @@
 	}
 
 	if(feedString == '' && defaultFeeds.toString(',') != '') {
-		feedString = defaultFeeds.toString(',');
+		feedString = defaultFeeds.toString(',') + '?timezone=-4.0';
 	}
 
 	if(applicationName != '') {
@@ -446,7 +446,7 @@
 	$('#setFeeds').click(function() {
 		setApiKey($('#apiKeyInput').val());
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val() + '?timezone=-4.0';
+		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
 		return false;
 	});
 // END Initialization
