@@ -386,7 +386,7 @@
 	}
 
 	if(feedString == '' && defaultFeeds.toString(',') != '') {
-		feedString = defaultFeeds.toString(',') + '?timezone=-4.0';
+		feedString = defaultFeeds.toString(',');
 	}
 
 	if(applicationName != '') {
@@ -401,7 +401,7 @@
 	var feeds = feedString.split(',');
 
 	$('#apiKeyInput').val(key);
-	$('#feedsInput').val(feedString);
+	$('#feedsInput').val(feedString) + '?timezone=-4.0';
 
 	$("#apiKeyInput").mouseover(function() {
 		console.log($("#apiKeyInput").prop('disabled'));
