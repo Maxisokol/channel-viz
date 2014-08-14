@@ -17,7 +17,7 @@
 		applicationName	= 'Данные с датчиков', // Replaces Xively logo in the header
 		dataDuration	= '1day', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 0, // Default interval for data to be displayed (in seconds)
-		dataColor	= 'ff5722', // CSS HEX value of color to represent data (omit leading #)
+		dataColor	= '880000', // CSS HEX value of color to represent data (omit leading #)
 		hideForm	= 1; // To hide input form use value of 1, otherwise set to 0
 
 // Function Declarations
@@ -348,7 +348,7 @@
 
 					$('#feed-' + data.id + ' .duration-90').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '90days', 10800);
+						updateFeeds(data.id, thisFeedDatastreams, '1hour', 0);
 						return false;
 					});
 
