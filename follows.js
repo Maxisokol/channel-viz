@@ -61,7 +61,7 @@
 	Date.prototype.parseISO = function(iso){
 		var stamp= Date.parse(iso);
 		if(!stamp) throw iso +' Unknown date format';
-		return new Date(stamp + '04:00');
+		return new Date(stamp);
 	}
 
 	// Set xively API Key
@@ -81,7 +81,7 @@
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
-					updated = updated.parseISO(datastream.at);
+					updated = updated.parseISO(datastream.at + '04:00');
 					var diff = null;
 					if(duration == '6hours') diff = 21600000;
 					 if(duration == '1day') diff = 86400000;
