@@ -401,7 +401,7 @@
 	var feeds = feedString.split(',');
 
 	$('#apiKeyInput').val(key);
-	$('#feedsInput').val(feedString) + '?timezone=-4.0';
+	$('#feedsInput').val(feedString);
 
 	$("#apiKeyInput").mouseover(function() {
 		console.log($("#apiKeyInput").prop('disabled'));
